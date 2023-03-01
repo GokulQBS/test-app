@@ -1,6 +1,9 @@
 import React from "react";
+import App from '../App';
 
-function about() {
+
+
+function login() {
     return (
         <div className="mt-5">
             <div className="animeffectpage">
@@ -19,7 +22,7 @@ function about() {
                         <input type="text" name="password" className="login-input my-2" placeholder="Enter password" />
                     </div>
                     <div className="">
-                    <button className="btn btn-primary loginbtn" id="loginbtn">Login</button>
+                    <button className="btn btn-primary loginbtn" id="loginbtn" onClick={App(1)}>Login</button>
                     </div>
                 </div>
             </div>
@@ -27,4 +30,4 @@ function about() {
     );
 }
 
-export default about;
+export default login;

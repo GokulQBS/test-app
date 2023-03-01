@@ -1,23 +1,23 @@
 import React from 'react';
-import About from './component/about'
-import Container from 'react-bootstrap/Container';
+import Login from './component/login'
 import Header from './component/header';
+import Home from './component/home';
+
+
+function App(value=0) {
 
 var result;
-var Head = null;
-if (Head != null){
-  result = <Header/>;
+var Head = value;
+
+if (Head == 0){
+  result = <div><Header/><Home/></div>;
 }else{
-  result = null;
+  result = <div><Login/></div>;
 }
 
-function App() {
   return (
     <div className="App">
       {result}
-      <Container>
-      <About />
-      </Container>
     </div>
   );
 }
