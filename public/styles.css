@@ -1,15 +1,31 @@
+body{
+    overflow: hidden;
+    background-color: rgb(34, 34, 34);
+}
+:root{
+    --transperent:#ffffff11;
+}
 .loginpage {
     height: 400px;
     width: 500px;
 }
-.animeffect{
+.animeffectpage{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
     z-index: -1;
+    animation-name: backgroundcolor;
+    animation-duration: 3s;
+}
+.animeffect{
     position: absolute;
     height: 110%;
     width: 60%;
     top: 0;
     left: 20%;
-    clip-path: polygon(evenodd, 29.77% 36%, 70.83% 36%, 75% 11%, 75% 0%, 78.2% 36.14%, 75% 76.5%, 62.5% 86%, 62.5% 60.07%, 75% 50.57%, 56.25% 55.32%, 62.5% 60.07%, 62.5% 86%, 37.5% 86%, 37.5% 60.07%, 25% 50.57%, 43.75% 55.32%, 37.5% 60.07%, 37.5% 86%, 25.4% 76.25%, 22.04% 36.14%, 25.4% 0%);
+    clip-path: polygon(evenodd, 29.77% 36%, 70.83% 36%, 70.83% 35.26%, 74.2% 0%, 78.2% 36.14%, 75% 76.5%, 62.5% 86%, 62.5% 60.07%, 75% 50.57%, 56.25% 55.32%, 62.5% 60.07%, 62.5% 86%, 37.5% 86%, 37.5% 60.07%, 25% 50.57%, 43.75% 55.32%, 37.5% 60.07%, 37.5% 86%, 25.4% 76.25%, 22.04% 36.14%, 25.4% 0%);
 }
 .blownup,.blownup2 {
     position: absolute;
@@ -19,30 +35,120 @@
     left: 0;
     z-index: -1;
 }
-
 .blownup{
     clip-path: circle(0% at 50% 50%);
-    background-color: rgba(0, 255, 255, 0.528);
+    background-color: rgb(0, 255, 255);
     animation-name: gooutanime;
-    animation-duration: 1s;
+    animation-delay: .20s;
+    animation-duration: 2s;
 
 }
 .blownup2{
     clip-path: circle(0% at 50% 50%);
-    background-color: rgba(0, 255, 255, 0.528);
+    background-color: rgb(0, 255, 255);
     animation-name: gooutanime;
     animation-delay: .10s;
-    animation-duration: 1s;
-}
+    animation-duration: 2s;
 
-@keyframes gooutanime {
+}
+@keyframes button{
+    0% {transform: translateY(-100px); opacity: 10%;}
+    98%{opacity: 1;}
+    100% {transform: translateY(0px);}
+}
+@keyframes backgroundcolor{
+    0% {z-index: 2;background-color: black;}
+    80%{z-index: 2;background-color: rgb(0, 0, 0);}
+    100%{z-index: 0;background-color: rgba(0, 0, 0, 0);}
+}
+@keyframes gooutanime{
     0% {
         clip-path: circle(0% at 50% 50%);
         opacity: 100%;
+        z-index: 2;
     }
 
     100% {
-        clip-path: circle(70% at 50% 50%);
+        clip-path: circle(60% at 50% 50%);
         opacity: 0%;
+        z-index: 2;
     }
+}
+
+ @keyframes login-form{
+    0% {
+        box-shadow: 0 0 2000px  rgb(255, 255, 255);
+        -webkit-backdrop-filter: blur(50%);
+    }
+
+    100% {
+        box-shadow: 0 0 15px  rgb(137, 137, 137);
+    }
+}
+ @keyframes login-form{
+    0% {
+        box-shadow: 0 0 2000px  rgb(255, 255, 255);
+    }
+
+    100% {
+        box-shadow: 0 0 15px  rgb(137, 137, 137);
+    }
+}
+
+h2{
+    margin: 0;
+}
+ .login-text{
+    padding-bottom: 20px;
+    padding-top: 20px;
+ }
+ .login-form{
+    margin-top: 15%;
+    background-color:#ffffff11;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 15px  rgb(137, 137, 137);
+    animation-name: login-form;
+    animation-duration: 1s;
+    animation-delay: 2.5s;
+ }
+.login-input{
+    outline: none;
+    width: 100%;
+    height: 50px;
+    background-color:#ffffff11;
+    border-color: #ffffff11;
+    color: aqua;
+    font-size: 18px;
+}
+.login-input::placeholder {
+    color: aqua;
+  }
+.login-input:active{
+        width: 100%;
+        background-color:#ffffff11;
+        border-color: #ffffff11;
+        color: aqua;  
+}
+.login-input:focus{
+        width: 100%;
+        background-color:#ffffff11;
+        border-color: #ffffff11;
+        color: aqua;  
+}
+.loginbtn{
+    width: 150px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius:15px ;
+    background-color: #ffffff11;
+    border-color: #ffffff11;
+    animation-name: button;
+    animation-duration: 1s;
+    animation-delay: 2.5s;
+}
+.loginbtn:hover{
+    background-color: #ffffff4a;
+    border-color: #ffffff11;
 }
