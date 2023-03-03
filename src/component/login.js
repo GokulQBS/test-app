@@ -1,6 +1,4 @@
 import React from "react";
-import App from '../App';
-
 
 
 function login() {
@@ -22,7 +20,7 @@ function login() {
                         <input type="text" name="password" className="login-input my-2" placeholder="Enter password" />
                     </div>
                     <div className="">
-                    <button className="btn btn-primary loginbtn" id="loginbtn" onClick={App(1)}>Login</button>
+                    <button className="btn btn-primary loginbtn" id="loginbtn">Login</button>
                     </div>
                 </div>
             </div>

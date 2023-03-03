@@ -8,7 +8,7 @@ function Header() {
                 <div className="navbar navbar-expand-lg">
                     <ul className="navbar-nav">
                         <li className="nav-item">Home</li>
-                        <li className="nav-item mx-3">About</li>
+                        <li className="nav-item mx-lg-3">About</li>
                         <li className="nav-item">contact</li>
                     </ul>
                 </div>
